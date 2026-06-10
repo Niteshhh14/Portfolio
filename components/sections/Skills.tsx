@@ -6,7 +6,7 @@ import { GlowCard } from "@/components/ui/spotlight-card";
 
 const SKILL_CATEGORIES = [
   {
-    title: "AI/ML & Deep Learning",
+    title: "AI/ML",
     icon: Brain,
     accent: "text-accent-purple bg-accent-purple/10 border-accent-purple/20",
     glowColor: "purple" as const,
@@ -19,8 +19,6 @@ const SKILL_CATEGORIES = [
       "CNN Architectures",
       "Transformer Models",
       "Deep Learning",
-      "Neural Networks",
-      "Feature Engineering",
     ],
   },
   {
@@ -32,10 +30,8 @@ const SKILL_CATEGORIES = [
       "C / C++",
       "Arduino SDK",
       "Raspberry Pi Board",
-      "ROS (Robot Operating System)",
       "Microcontrollers",
       "UART / I2C / SPI Protocols",
-      "PCB Design",
       "Hardware Debugging",
       "Sensor Integration",
     ],
@@ -67,12 +63,8 @@ const SKILL_CATEGORIES = [
       "Linux (Ubuntu/Debian)",
       "Git & GitHub",
       "Docker Containers",
-      "VMware",
       "MATLAB & Simulink",
-      "Proteus Simulation",
       "Shell Scripting",
-      "Bash Automation",
-      "SSH / SSH Keys",
     ],
   },
 ];

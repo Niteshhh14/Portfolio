@@ -192,14 +192,18 @@ export default function Contact() {
             {/* Social Links */}
             <div className="mt-12 lg:mt-0 flex items-center gap-4">
               <a
-                href="#"
+                href="http://www.linkedin.com/in/nitesh-reddy-maram"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-surface-1 hover:bg-surface-2 border border-surface-2 hover:border-accent-blue/30 text-text-muted hover:text-text-primary transition-all duration-200"
                 title="LinkedIn"
               >
                 <LinkedinIcon className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://github.com/Niteshhh14"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-3 rounded-xl bg-surface-1 hover:bg-surface-2 border border-surface-2 hover:border-accent-cyan/30 text-text-muted hover:text-text-primary transition-all duration-200"
                 title="GitHub"
               >

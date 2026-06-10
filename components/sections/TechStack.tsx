@@ -6,28 +6,19 @@ import { GlowCard } from "@/components/ui/spotlight-card";
 
 const STACK_CATEGORIES = [
   {
-    title: "Programming Languages",
+    title: "Software & Frameworks",
     icon: Code,
     color: "text-accent-blue",
     glowColor: "blue" as const,
     items: [
       { name: "Python" },
       { name: "C / C++" },
-      { name: "TypeScript" },
       { name: "JavaScript" },
-      { name: "Bash / Shell" },
+      { name: "TypeScript" },
       { name: "HTML5 / CSS3" },
-    ],
-  },
-  {
-    title: "Frameworks & Libraries",
-    icon: Terminal,
-    color: "text-accent-purple",
-    glowColor: "purple" as const,
-    items: [
-      { name: "Next.js 14" },
       { name: "React.js" },
-      { name: "Node.js / Express" },
+      { name: "Spring Boot" },
+      { name: "Bootstrap" },
       { name: "PyTorch" },
       { name: "TensorFlow" },
     ],
@@ -48,12 +39,11 @@ const STACK_CATEGORIES = [
   {
     title: "Platforms & Database",
     icon: HardDrive,
-    color: "text-accent-cyan",
+    color: "text-accent-purple",
     glowColor: "green" as const,
     items: [
-      { name: "Git / GitHub" },
+      { name: "Linux / Git" },
       { name: "Docker" },
-      { name: "Linux (Ubuntu)" },
       { name: "MongoDB / SQL" },
     ],
   },
@@ -105,7 +95,7 @@ export default function TechStack() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto"
         >
           {STACK_CATEGORIES.map((category, index) => {
             const Icon = category.icon;
