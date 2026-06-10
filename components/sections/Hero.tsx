@@ -109,7 +109,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-text-muted text-sm sm:text-base leading-relaxed max-w-xl mb-10"
           >
-            I build intelligent systems combining AI, software, electronics, and automation — with interests in networking, robotics, and real-world problem solving.
+            I build systems combining software, AI, electronics, and automation - with interests in robotics, networking, and real-world engineering problems.
           </motion.p>
 
           {/* CTA Buttons */}

@@ -71,7 +71,7 @@ export default function Resume() {
             <div className="flex items-center gap-2">
               <FileText className="w-5 h-5 text-accent-blue" />
               <span className="font-heading font-semibold text-text-primary text-xl sm:text-2xl tracking-tight">
-                Nitesh — B.Tech ECE
+                Nitesh - B.Tech ECE
               </span>
             </div>
             
