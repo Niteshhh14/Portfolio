@@ -107,19 +107,19 @@ export default function About() {
                   <ul className="space-y-2.5 font-mono text-xs text-text-muted">
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan" />
-                      Embedded Firmware & C/C++
+                      Software Development
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan" />
-                      Robotics & ROS mapping
+                      System Design & Automation
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan" />
-                      Edge AI & Neural Inference
+                      Networking & Systems
                     </li>
                     <li className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-accent-cyan" />
-                      System scripting & Automation
+                      Embedded Systems & C++
                     </li>
                   </ul>
                 </div>
