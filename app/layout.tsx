@@ -21,9 +21,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Nitesh Reddy | Systems & Automation Portfolio",
-  description: "Personal portfolio of Nitesh Reddy, exhibiting systems exploration, robotics automation, machine learning research, and full-stack development. Recruiter-ready, high-performance UI.",
-  keywords: ["Nitesh Reddy", "Systems Engineering", "Automation", "Embedded Systems", "Machine Learning", "Anurag University", "Developer Portfolio"],
+  title: "Nitesh's Portfolio",
+  description: "Personal portfolio of Nitesh Reddy.",
+  keywords: ["Nitesh Reddy", "Developer Portfolio"],
   authors: [{ name: "Nitesh Reddy" }],
 };
 
