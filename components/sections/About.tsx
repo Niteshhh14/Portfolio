@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { GraduationCap, Award, BookOpen, Cpu, Network } from "lucide-react";
+import { DiplomaIcon as GraduationCap, Award01Icon as Award, BookOpen01Icon as BookOpen, CpuIcon as Cpu, Share01Icon as Network } from "hugeicons-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
 
 const STATS = [

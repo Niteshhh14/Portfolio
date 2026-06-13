@@ -1,25 +1,43 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import dynamic from "next/dynamic";
+import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Preloader from "@/components/ui/preloader";
 import Navbar from "@/components/ui/Navbar";
-import ParticleBackground from "@/components/three/ParticleBackground";
 import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Skills from "@/components/sections/Skills";
-import Experience from "@/components/sections/Experience";
-import Projects from "@/components/sections/Projects";
-import Research from "@/components/sections/Research";
-import TechStack from "@/components/sections/TechStack";
-import Resume from "@/components/sections/Resume";
-import Contact from "@/components/sections/Contact";
+
+// Dynamic Imports
+const ParticleBackground = dynamic(() => import("@/components/three/ParticleBackground"), { ssr: false });
+const About = dynamic(() => import("@/components/sections/About"));
+const Skills = dynamic(() => import("@/components/sections/Skills"));
+const Experience = dynamic(() => import("@/components/sections/Experience"));
+const Projects = dynamic(() => import("@/components/sections/Projects"));
+const Research = dynamic(() => import("@/components/sections/Research"));
+const TechStack = dynamic(() => import("@/components/sections/TechStack"));
+const Resume = dynamic(() => import("@/components/sections/Resume"));
+const Contact = dynamic(() => import("@/components/sections/Contact"));
 
 export default function Home() {
   const [showIntro, setShowIntro] = useState(true);
 
   return (
     <>
+      {/* Background Video ALWAYS renders so it buffers during intro */}
+      <div className={`fixed inset-0 -z-20 w-full h-full overflow-hidden pointer-events-none [transform:translate3d(0,0,0)] [will-change:transform] transition-opacity duration-1000 ${showIntro ? 'opacity-0' : 'opacity-100'}`}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="w-full h-full object-cover opacity-20 [transform:translate3d(0,0,0)] [will-change:transform]"
+        >
+          <source src="/hero-bg.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-bg-primary/65" />
+      </div>
+
       <AnimatePresence mode="wait">
         {showIntro && (
           <Preloader key="intro" onComplete={() => setShowIntro(false)} />
@@ -28,19 +46,6 @@ export default function Home() {
 
       {!showIntro && (
         <div className="relative min-h-screen flex flex-col overflow-x-hidden">
-          {/* Subtle Global Video Background */}
-          <div className="fixed inset-0 -z-20 w-full h-full overflow-hidden pointer-events-none [transform:translate3d(0,0,0)] [will-change:transform]">
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full h-full object-cover opacity-20 [transform:translate3d(0,0,0)] [will-change:transform]"
-            >
-              <source src="/hero-bg.mp4" type="video/mp4" />
-            </video>
-            <div className="absolute inset-0 bg-bg-primary/65" />
-          </div>
 
           {/* Subtle Lazy-loaded Particle Background */}
           <ParticleBackground />

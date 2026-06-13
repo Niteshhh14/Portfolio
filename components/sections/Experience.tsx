@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Briefcase, Calendar, MapPin } from "lucide-react";
+import { Briefcase01Icon as Briefcase, Calendar01Icon as Calendar, Location01Icon as MapPin } from "hugeicons-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
 
 interface ExperienceItem {

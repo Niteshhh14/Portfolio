@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { ChevronDown, X } from "lucide-react";
+import { ArrowDown01Icon as ChevronDown, Cancel01Icon as X } from "hugeicons-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_ITEMS = [

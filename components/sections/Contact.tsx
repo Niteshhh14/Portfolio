@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Mail, Copy, Check, MapPin, Send } from "lucide-react";
+import { Mail01Icon as Mail, Copy01Icon as Copy, Tick01Icon as Check, Location01Icon as MapPin, SentIcon as Send } from "hugeicons-react";
 import canvasConfetti from "canvas-confetti";
 import emailjs from '@emailjs/browser';
 import { GlowCard } from "@/components/ui/spotlight-card";
@@ -157,33 +157,35 @@ export default function Contact() {
                 <GlowCard
                   customSize={true}
                   glowColor="blue"
-                  className="flex items-center justify-between p-4 max-w-sm cursor-default w-full"
+                  className="p-4 max-w-sm cursor-default w-full"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="p-2 rounded-lg bg-surface-1 border border-surface-2 text-accent-cyan">
-                      <Mail className="w-4.5 h-4.5" />
+                  <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center gap-3">
+                      <div className="p-2 rounded-lg bg-surface-1 border border-surface-2 text-accent-cyan">
+                        <Mail className="w-4.5 h-4.5" />
+                      </div>
+                      <div>
+                        <span className="font-mono text-[9px] text-text-muted uppercase tracking-wider block">
+                          Direct Email
+                        </span>
+                        <span className="text-text-primary text-xs sm:text-sm font-medium font-mono">
+                          {emailAddress}
+                        </span>
+                      </div>
                     </div>
-                    <div>
-                      <span className="font-mono text-[9px] text-text-muted uppercase tracking-wider block">
-                        Direct Email
-                      </span>
-                      <span className="text-text-primary text-xs sm:text-sm font-medium font-mono">
-                        {emailAddress}
-                      </span>
-                    </div>
-                  </div>
 
-                  <button
-                    onClick={handleCopyEmail}
-                    className="p-2 rounded-lg hover:bg-surface-1 text-text-muted hover:text-text-primary transition-colors cursor-pointer z-10"
-                    title="Copy Email"
-                  >
-                    {copied ? (
-                      <Check className="w-4 h-4 text-emerald-500" />
-                    ) : (
-                      <Copy className="w-4 h-4" />
-                    )}
-                  </button>
+                    <button
+                      onClick={handleCopyEmail}
+                      className="p-2 rounded-lg hover:bg-surface-1 text-text-muted hover:text-text-primary transition-colors cursor-pointer z-10"
+                      title="Copy Email"
+                    >
+                      {copied ? (
+                        <Check className="w-4 h-4 text-emerald-500" />
+                      ) : (
+                        <Copy className="w-4 h-4" />
+                      )}
+                    </button>
+                  </div>
                 </GlowCard>
 
               </div>
@@ -298,7 +300,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "submitting"}
-                  className="mt-4 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-accent-blue text-text-primary text-xs font-mono font-medium tracking-wider uppercase hover:bg-accent-blue/80 hover:shadow-lg hover:shadow-accent-blue/15 transition-all duration-200 cursor-pointer z-10 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="mt-4 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-accent-primary text-black font-semibold text-xs tracking-wider uppercase hover:bg-[#D4D4D4] hover:shadow-lg hover:shadow-accent-primary/20 transition-all duration-200 cursor-pointer z-10 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {status === "submitting" ? "Sending..." : status === "success" ? "Message Sent!" : status === "error" ? "Error! Try Again" : "Send Message"}
                   {status === "idle" && <Send className="w-4 h-4" />}

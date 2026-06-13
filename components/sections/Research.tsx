@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FileText, Lightbulb, GraduationCap, ChevronRight } from "lucide-react";
+import { Note01Icon as FileText, Idea01Icon as Lightbulb, DiplomaIcon as GraduationCap, ArrowRight01Icon as ChevronRight } from "hugeicons-react";
 import canvasConfetti from "canvas-confetti";
 import { GlowCard } from "@/components/ui/spotlight-card";
 

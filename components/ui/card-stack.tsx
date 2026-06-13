@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, useMotionValue, useTransform, AnimatePresence, Variants } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Folder } from 'lucide-react';
+import { ArrowLeft01Icon as ChevronLeft, ArrowRight01Icon as ChevronRight, Folder01Icon as Folder } from 'hugeicons-react';
 import { GlowCard } from './spotlight-card';
 
 const GithubIcon = ({ className = "w-4.5 h-4.5" }: { className?: string }) => (

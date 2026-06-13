@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FileText, Mail, ArrowRight } from "lucide-react";
+import { Note01Icon as FileText, Mail01Icon as Mail, ArrowRight01Icon as ArrowRight } from "hugeicons-react";
 import AvatarAnimator from "./AvatarAnimator";
 
 const ROTATING_TITLES = [
@@ -121,14 +121,14 @@ export default function Hero() {
           >
             <button
               onClick={() => scrollToSection("resume")}
-              className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-accent-blue text-text-primary text-xs font-mono font-medium tracking-wider uppercase hover:bg-accent-blue/80 hover:shadow-lg hover:shadow-accent-blue/10 transition-all duration-200 cursor-pointer w-full sm:w-auto"
+              className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-accent-primary text-black font-semibold text-xs tracking-wider uppercase hover:bg-[#D4D4D4] hover:shadow-lg hover:shadow-accent-primary/20 transition-all duration-200 cursor-pointer w-full sm:w-auto"
             >
               Download Resume
               <FileText className="w-4 h-4" />
             </button>
             <button
               onClick={() => scrollToSection("projects")}
-              className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-surface-1 hover:bg-surface-2 border border-surface-2 hover:border-text-muted/20 text-text-primary text-xs font-mono font-medium tracking-wider uppercase transition-all duration-200 cursor-pointer w-full sm:w-auto"
+              className="flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-surface-2 hover:bg-[#2A2A2A] border border-[#333333] hover:border-accent-primary/30 text-text-primary text-xs font-mono font-medium tracking-wider uppercase transition-all duration-200 cursor-pointer w-full sm:w-auto"
             >
               View Projects
               <ArrowRight className="w-4 h-4" />

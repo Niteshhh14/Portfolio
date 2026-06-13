@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Brain, Cpu, Layers, Terminal } from "lucide-react";
+import { BrainIcon as Brain, CpuIcon as Cpu, LayerIcon as Layers, SourceCodeIcon as Terminal } from "hugeicons-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
 
 const SKILL_CATEGORIES = [

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Loading01Icon as Loader2 } from "hugeicons-react";
 import TetrisLoading from "@/components/ui/tetris-loader";
 
 const TOTAL_FRAMES = 90;

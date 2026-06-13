@@ -1,10 +1,11 @@
 "use client";
 
-import { Download, FileText, ExternalLink } from "lucide-react";
+import { Download01Icon as Download, Note01Icon as FileText, LinkSquare01Icon as ExternalLink } from "hugeicons-react";
 import canvasConfetti from "canvas-confetti";
 import { GlowCard } from "@/components/ui/spotlight-card";
 import AnimatedGradientBackground from "@/components/ui/animated-gradient-background";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import dynamic from "next/dynamic";
+const DotLottieReact = dynamic(() => import('@lottiefiles/dotlottie-react').then(mod => mod.DotLottieReact), { ssr: false });
 
 export default function Resume() {
   const handleDownload = () => {
@@ -53,13 +54,13 @@ export default function Resume() {
             <div className="absolute inset-0 bg-bg-primary/45 group-hover:bg-bg-primary/35 transition-colors duration-300" />
           </div>
 
-          {/* Centered Lottie Cat Animation (offset to the right to visually center the cat's body due to its long tail on the right) */}
+          {/* Centered Lottie Cat Animation */}
           <div 
-            style={{ transform: "translateX(var(--cat-shift, 44px))" }}
-            className="relative z-10 w-44 h-44 sm:w-52 sm:h-52 -mt-4 flex items-center justify-center overflow-hidden [--cat-shift:32px] sm:[--cat-shift:46px]"
+            style={{ transform: "translate(120px, 20px)" }}
+            className="relative z-10 w-44 h-44 sm:w-52 sm:h-52 -mt-4 flex items-center justify-center overflow-hidden"
           >
             <DotLottieReact
-              src="https://lottie.host/8cf4ba71-e5fb-44f3-8134-178c4d389417/0CCsdcgNIP.json"
+              src="/Lottiecat_bw.json"
               loop
               autoplay
               style={{ width: "100%", height: "100%" }}
@@ -86,7 +87,7 @@ export default function Resume() {
               href="/Nitesh_Resume_n.pdf"
               download="Nitesh_Resume.pdf"
               onClick={handleDownload}
-              className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-accent-blue text-text-primary text-xs font-mono font-medium tracking-wider uppercase hover:bg-accent-blue/80 hover:shadow-lg hover:shadow-accent-blue/15 transition-all duration-200 cursor-pointer w-full sm:w-auto text-center"
+              className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-accent-primary text-black font-semibold text-xs tracking-wider uppercase hover:bg-[#D4D4D4] hover:shadow-lg hover:shadow-accent-primary/20 transition-all duration-200 cursor-pointer w-full sm:w-auto text-center"
             >
               <Download className="w-4 h-4" />
               Download Resume
@@ -94,7 +95,7 @@ export default function Resume() {
             
             <a
               href="#about"
-              className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-surface-1 hover:bg-surface-2 border border-surface-2 hover:border-text-muted/20 text-text-primary text-xs font-mono font-medium tracking-wider uppercase transition-all duration-200 cursor-pointer w-full sm:w-auto text-center animate-none"
+              className="flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-surface-2 hover:bg-[#2A2A2A] border border-[#333333] hover:border-accent-primary/30 text-text-primary text-xs font-mono font-medium tracking-wider uppercase transition-all duration-200 cursor-pointer w-full sm:w-auto text-center animate-none"
             >
               View Focus Areas
               <ExternalLink className="w-4 h-4 text-text-muted" />

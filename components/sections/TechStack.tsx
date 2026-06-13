@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { Terminal, Code, Cpu, HardDrive } from "lucide-react";
+import { SourceCodeIcon as Terminal, CodeIcon as Code, CpuIcon as Cpu, HardDriveIcon as HardDrive } from "hugeicons-react";
 import { GlowCard } from "@/components/ui/spotlight-card";
 
 const STACK_CATEGORIES = [

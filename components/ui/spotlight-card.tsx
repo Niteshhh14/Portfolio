@@ -68,7 +68,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
       '--spread': spread,
       '--radius': '16', // rounded-2xl corresponds to 16px border-radius
       '--border': '1.5', // thin premium border
-      '--backdrop': 'rgba(26, 34, 52, 0.4)', // glassmorphism match
+      '--backdrop': 'rgba(23, 23, 23, 0.6)', // glassmorphism match (neutral matte black)
       '--backup-border': 'rgba(255, 255, 255, 0.05)',
       '--size': '300', // spotlight radius
       '--outer': '1',
@@ -79,7 +79,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         var(--spotlight-size) var(--spotlight-size) at
         calc(var(--x, 0) * 1px)
         calc(var(--y, 0) * 1px),
-        hsl(var(--hue, 210) 80% 65% / 0.08), transparent 100%
+        hsl(0 0% 100% / 0.05), transparent 100%
       )`,
       backgroundColor: 'var(--backdrop, transparent)',
       backgroundSize: 'calc(100% + (2 * var(--border-size))) calc(100% + (2 * var(--border-size)))',
@@ -127,7 +127,7 @@ const GlowCard: React.FC<GlowCardProps> = ({
         calc(var(--spotlight-size) * 0.75) calc(var(--spotlight-size) * 0.75) at
         calc(var(--x, 0) * 1px)
         calc(var(--y, 0) * 1px),
-        hsl(var(--hue, 210) 90% 70% / 0.25), transparent 100%
+        hsl(0 0% 100% / 0.12), transparent 100%
       );
       filter: brightness(1.5);
     }
